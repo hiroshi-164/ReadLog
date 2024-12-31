@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+<head>
+    <title>メニュー画面</title>
+    <style>
+        body {
+            background-color: #121212; /* ダーク背景 */
+            color: #ffffff; /* 白文字 */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            border: 2px solid #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            background: linear-gradient(145deg, #1e1e1e, #2a2a2a); /* グラデーション背景 */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5), 0 -4px 8px rgba(255, 255, 255, 0.1);
+            width: 50%;
+            max-width: 600px;
+        }
+
+        h1 {
+            margin: 0 0 20px 0;
+            font-size: 36px;
+            color: #ffcc00; /* ゴールドのアクセント */
+        }
+
+        .menu-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .menu-link {
+            display: inline-block;
+            text-decoration: none;
+            color: #121212;
+            background-color: #ffcc00;
+            padding: 12px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .menu-link:hover {
+            background-color: #ff9900;
+            transform: scale(1.05); /* 少し拡大 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>メニュー画面</h1>
+        <h:form id="menuForm">
+            <div class="menu-links">
+                <a href="search.xhtml" class="menu-link">検索</a>
+                <a href="register.xhtml" class="menu-link">登録</a>
+                <a href="delete.xhtml" class="menu-link">削除</a>
+                <a href="update.xhtml" class="menu-link">更新</a>
+                <a href="file.xhtml" class="menu-link">ダウンロード/アップロード</a>
+            </div>
+        </h:form>
+    </div>
+</body>
+</html>

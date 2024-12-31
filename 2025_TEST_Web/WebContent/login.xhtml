@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<title>Login</title>
+<style>
+body {
+	background-color: #121212; /* ダーク背景 */
+	color: #ffffff; /* 白文字 */
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+
+.container {
+	text-align: center;
+	border: 2px solid #ffffff;
+	padding: 30px;
+	border-radius: 15px;
+	background: linear-gradient(145deg, #1e1e1e, #2a2a2a); /* グラデーション背景 */
+	box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5), 0 -4px 8px
+		rgba(255, 255, 255, 0.1);
+	width: 120%;
+	max-width: 400px;
+}
+
+h1 {
+	margin: 0 0 20px 0;
+	font-size: 36px;
+	color: #ffcc00; /* ゴールドのアクセント */
+}
+
+.description {
+	margin: 10px 0 20px 0;
+	font-size: 18px;
+}
+
+input[type="text"], input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+	background-color: #333;
+	border: 1px solid #555;
+	border-radius: 8px;
+	color: #fff;
+	font-size: 16px;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+	border-color: #ffcc00;
+	outline: none;
+}
+
+.login-btn {
+	width: 100%;
+	padding: 10px;
+	background-color: #ffcc00;
+	border: none;
+	color: #121212;
+	font-size: 18px;
+	font-weight: bold;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-btn:hover {
+	background-color: #ff9900;
+	transform: scale(1.05);
+}
+
+.signup-link {
+	margin-top: 10px;
+	color: #ffcc00;
+	font-size: 14px;
+}
+
+.signup-link a {
+	color: #ffcc00;
+	text-decoration: none;
+}
+
+.signup-link a:hover {
+	text-decoration: underline;
+}
+</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1>ログイン</h1>
+		<div class="description">ログインするには資格情報を入力してください。</div>
+		<h:form>
+			<h:inputText id="username" value="#{loginBean.username}" />
+			<h:inputText id="password" value="#{loginBean.password}" />
+
+			<h:commandButton value="Login" action="#{loginBean.login}"
+				class="login-btn" />
+		</h:form>
+		<div class="signup-link">
+			<p>
+				アカウントをお持ちではありませんか? <a href="/signup"
+					style="text-decoration: underline;">サインアップはこちら</a>
+			</p>
+
+		</div>
+	</div>
+</body>
+</html>

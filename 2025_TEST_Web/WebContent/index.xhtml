@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+<head>
+    <title>INDEX</title>
+    <style>
+        body {
+            background-color: #121212; /* ダーク背景 */
+            color: #ffffff; /* 白文字 */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            border: 2px solid #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            background: linear-gradient(145deg, #1e1e1e, #2a2a2a); /* グラデーション背景 */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5), 0 -4px 8px rgba(255, 255, 255, 0.1);
+            width: 50%;
+            max-width: 600px;
+        }
+
+        h1 {
+            margin: 0 0 20px 0;
+            font-size: 36px;
+            color: #ffcc00; /* ゴールドのアクセント */
+        }
+
+        .description {
+            margin: 10px 0 20px 0;
+            font-size: 18px;
+        }
+
+        .enter-link {
+            display: inline-block;
+            text-decoration: none;
+            color: #121212;
+            background-color: #ffcc00;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .enter-link:hover {
+            background-color: #ff9900;
+            transform: scale(1.05); /* 少し拡大 */
+        }
+    </style>
+    <script type="text/javascript">
+        // ポップアップを開く関数
+        function openPopup() {
+            var url = "login.xhtml";  // ポップアップで表示するURL
+            var width = 1200;         // ポップアップの幅
+            var height = 600;        // ポップアップの高さ
+            var left = (window.innerWidth / 2) - (width / 2);  // 中央に配置
+            var top = (window.innerHeight / 2) - (height / 2); // 中央に配置
+
+            // ポップアップウィンドウを開く（サイズ固定）
+            window.open(
+                url, 
+                "menuPopup", 
+                "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top + 
+                ",resizable=no,scrollbars=yes"
+            );
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>読書管理システム</h1>
+        <a href="javascript:void(0);" class="enter-link" onclick="openPopup();">開始</a>
+    </div>
+</body>
+</html>
